@@ -1,4 +1,4 @@
-# SupplementalProject
+# HaskellInterpreter
 
 ## Usage
 Run: `stack run`
@@ -14,11 +14,10 @@ Prompt:
 ## Sections
 
 2. Step action - complete
-3. User prompt 
+3. User prompt
     1. Next statement - complete
     2. Print variable - complete
 4. Conditional breakpoints - complete
 5. Static analysis
     * Uninitialised variable references - complete
     * Unused variables - complete
-# HaskellInterpreter
