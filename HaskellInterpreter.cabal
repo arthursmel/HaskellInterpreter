@@ -1,0 +1,70 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b7bffdca60728acdbeeee93bb884f0ea1c5683ff08e5a341db3fd90c5114e4f7
+
+name:           HaskellInterpreter
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/arthursmel/HaskellInterpreter#readme>
+homepage:       https://github.com/arthursmel/HaskellInterpreter#readme
+bug-reports:    https://github.com/arthursmel/HaskellInterpreter/issues
+author:         Mel Arthurs
+maintainer:     arthurme@tcd.ie
+copyright:      2020 Mel Arthurs
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/arthursmel/HaskellInterpreter
+
+library
+  exposed-modules:
+      Evaluator
+      Interpreter
+      Lib
+  other-modules:
+      Paths_HaskellInterpreter
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers >=0.6.2.1
+    , mtl >=2.2.2
+  default-language: Haskell2010
+
+executable HaskellInterpreter-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_HaskellInterpreter
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellInterpreter
+    , base >=4.7 && <5
+    , containers >=0.6.2.1
+    , mtl >=2.2.2
+  default-language: Haskell2010
+
+test-suite HaskellInterpreter-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HaskellInterpreter
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellInterpreter
+    , base >=4.7 && <5
+    , containers >=0.6.2.1
+    , mtl >=2.2.2
+  default-language: Haskell2010

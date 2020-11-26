@@ -1,0 +1,50 @@
+name:                HaskellInterpreter
+version:             0.1.0.0
+github:              "arthursmel/HaskellInterpreter"
+license:             BSD3
+author:              "Mel Arthurs"
+maintainer:          "arthurme@tcd.ie"
+copyright:           "2020 Mel Arthurs"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/arthursmel/HaskellInterpreter#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- mtl >= 2.2.2
+- containers >= 0.6.2.1
+
+library:
+  source-dirs: src
+
+executables:
+  HaskellInterpreter-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - HaskellInterpreter
+
+tests:
+  HaskellInterpreter-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - HaskellInterpreter
