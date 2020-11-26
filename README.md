@@ -13,11 +13,11 @@ Prompt:
 
 ## Sections
 
-2. Step action - complete
+2. Step action
 3. User prompt
-    1. Next statement - complete
-    2. Print variable - complete
-4. Conditional breakpoints - complete
+    1. Next statement
+    2. Print variable
+4. Conditional breakpoints
 5. Static analysis
-    * Uninitialised variable references - complete
-    * Unused variables - complete
+    * Uninitialised variable references
+    * Unused variables
